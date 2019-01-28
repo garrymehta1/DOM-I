@@ -43,6 +43,8 @@ const siteContent = {
 };
 
 //HEADER - NAVBAR
+//content
+
 document.querySelectorAll("nav a")[0].textContent =
 	siteContent.nav["nav-item-1"];
 document.querySelectorAll("nav a")[1].textContent =
@@ -65,20 +67,34 @@ navItem2.textContent = "Vlogs";
 navItem2.style.marginRight = "20%";
 document.querySelectorAll("nav a")[0].prepend(navItem2);
 
+//style
 document.querySelectorAll("nav a").forEach(el => {
 	el.style.color = "green";
+	el.style.fontWeight = "bold";
 });
 
 //HEADER - IMG
+//content
 let logo = document.getElementById("logo-img");
 logo.src = siteContent.nav["img-src"];
 
 //SECTION CTA
+//content
 document.querySelector(".cta-text h1").textContent = siteContent.cta.h1;
 document.getElementById("cta-img").src = siteContent.cta["img-src"];
 document.getElementsByTagName("button")[0].textContent = siteContent.cta.button;
+document.getElementsByTagName("button")[0].style.backgroundColor = "green";
+document.getElementsByTagName("button")[0].style.color = "white";
 
-//SECTION MAIN-CONTENT
+//SECTION MAIN CONTENT, MIDDLE IMG, BOTTOM CONTENT
+//style
+document.querySelectorAll(".text-content h4").forEach(el => {
+	el.style.color = "green";
+});
+document.querySelector(".main-content").style.borderTop = "2px solid green";
+document.querySelector(".main-content").style.borderBottom = "2px solid green";
+
+//main content
 document.querySelectorAll(".main-content .text-content h4")[0].textContent =
 	siteContent["main-content"]["features-h4"];
 document.querySelectorAll(".main-content .text-content p")[0].textContent =
@@ -87,11 +103,12 @@ document.querySelectorAll(".text-content h4")[1].textContent =
 	siteContent["main-content"]["about-h4"];
 document.querySelectorAll(".text-content p")[1].textContent =
 	siteContent["main-content"]["about-content"];
-//MIDDLE IMG
+
+//middle img
 document.getElementById("middle-img").src =
 	siteContent["main-content"]["middle-img-src"];
 
-//SECTION BOTTOM-CONTENT
+//bottom content
 document.querySelectorAll(".bottom-content .text-content h4")[0].textContent =
 	siteContent["main-content"]["services-h4"];
 document.querySelectorAll(".bottom-content .text-content p")[0].textContent =
@@ -105,8 +122,11 @@ document.querySelectorAll(".bottom-content .text-content h4")[2].textContent =
 	siteContent["main-content"]["vision-h4"];
 document.querySelectorAll(".bottom-content .text-content p")[2].textContent =
 	siteContent["main-content"]["vision-content"];
-//CONTACT
 
+//CONTACT
+//style
+document.querySelectorAll(".contact h4")[0].style.color = "green";
+//text content
 document.querySelectorAll(".contact h4")[0].textContent =
 	siteContent["contact"]["contact-h4"];
 document.querySelectorAll(".contact p")[0].textContent =
@@ -115,6 +135,11 @@ document.querySelectorAll(".contact p")[1].textContent =
 	siteContent["contact"].phone;
 document.querySelectorAll(".contact p")[2].textContent =
 	siteContent["contact"].email;
-
+//FOOTER
+//style
+document.querySelectorAll("footer p")[0].style.backgroundColor = "green";
+document.querySelectorAll("footer p")[0].style.color = "white";
+document.querySelectorAll("footer p")[0].style.padding = "2%";
+//content
 document.querySelectorAll("footer p")[0].textContent =
 	siteContent["footer"].copyright;
