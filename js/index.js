@@ -49,7 +49,6 @@ const siteContent = {
 let selectedNavLinks = document.querySelectorAll("nav a");
 selectedNavLinks.forEach((el, i) => {
 	el.textContent = siteContent.nav[`nav-item-${i + 1}`];
-	selectedNavLinks.color = "green";
 });
 
 //href change
