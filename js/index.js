@@ -10,6 +10,7 @@ const siteContent = {
 	},
 	cta: {
 		h1: "DOM Is Awesome",
+		h1Alt: "DOM Is Even More Awesome",
 		button: "Get Started",
 		"img-src": "img/header-img.png"
 	},
@@ -44,7 +45,6 @@ const siteContent = {
 
 //HEADER - NAVBAR
 //content
-
 document.querySelectorAll("nav a")[0].textContent =
 	siteContent.nav["nav-item-1"];
 document.querySelectorAll("nav a")[1].textContent =
@@ -58,14 +58,17 @@ document.querySelectorAll("nav a")[4].textContent =
 document.querySelectorAll("nav a")[5].textContent =
 	siteContent.nav["nav-item-6"];
 
+//href change
+document.querySelectorAll("nav a")[0].href = "https://www.google.com";
+
+//append/prepend
 let navItem1 = document.createElement("a");
 navItem1.textContent = "Blog";
 document.querySelector("nav").appendChild(navItem1);
 
 let navItem2 = document.createElement("a");
 navItem2.textContent = "Vlogs";
-navItem2.style.marginRight = "20%";
-document.querySelectorAll("nav a")[0].prepend(navItem2);
+document.querySelector("nav").prepend(navItem2);
 
 //style
 document.querySelectorAll("nav a").forEach(el => {
@@ -77,6 +80,9 @@ document.querySelectorAll("nav a").forEach(el => {
 //content
 let logo = document.getElementById("logo-img");
 logo.src = siteContent.nav["img-src"];
+
+//alt
+logo.alt = "Logo in Header";
 
 //SECTION CTA
 //content
@@ -143,3 +149,16 @@ document.querySelectorAll("footer p")[0].style.padding = "2%";
 //content
 document.querySelectorAll("footer p")[0].textContent =
 	siteContent["footer"].copyright;
+
+//STRETCH - ADD EVENT LISTENERS
+
+let headding = document.querySelector(".cta-text h1");
+document
+	.getElementsByTagName("button")[0]
+	.addEventListener("click", function() {
+		if (headding.textContent === siteContent.cta.h1) {
+			headding.textContent = siteContent.cta.h1Alt;
+		} else if (headding.textContent === siteContent.cta.h1Alt) {
+			headding.textContent = siteContent.cta.h1;
+		}
+	});
