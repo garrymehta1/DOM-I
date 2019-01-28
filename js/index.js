@@ -60,8 +60,9 @@ document.getElementById("cta-img").src = "/img/header-img.png";
 document.getElementsByTagName("button")[0].textContent = "Get Started";
 
 //SECTION MAIN-CONTENT
-document.querySelectorAll(".text-content h4")[0].textContent = "Features";
-document.querySelectorAll(".text-content p")[0].textContent =
+document.querySelectorAll(".main-content .text-content h4")[0].textContent =
+	"Features";
+document.querySelectorAll(".main-content .text-content p")[0].textContent =
 	"Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 document.querySelectorAll(".text-content h4")[1].textContent = "About";
@@ -70,3 +71,21 @@ document.querySelectorAll(".text-content p")[1].textContent =
 
 //MIDDLE IMG
 document.getElementById("middle-img").src = "/img/mid-page-accent.jpg";
+
+//SECTION BOTTOM-CONTENT
+document.querySelectorAll(".bottom-content .text-content h4")[0].textContent =
+	"Services";
+document.querySelectorAll(".bottom-content .text-content p")[0].textContent =
+	"Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+document.querySelectorAll(".bottom-content .text-content h4")[1].textContent =
+	"Product";
+document.querySelectorAll(".bottom-content .text-content p")[1].textContent =
+	"Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+document.querySelectorAll(".bottom-content .text-content h4")[2].textContent =
+	"Vision";
+document.querySelectorAll(".bottom-content .text-content p")[2].textContent =
+	"Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+//CONTACT
