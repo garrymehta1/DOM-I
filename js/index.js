@@ -56,6 +56,10 @@ document.querySelectorAll("nav a")[4].textContent =
 document.querySelectorAll("nav a")[5].textContent =
 	siteContent.nav["nav-item-6"];
 
+document.querySelectorAll("nav a").forEach(el => {
+	el.style.color = "green";
+});
+
 //HEADER - IMG
 let logo = document.getElementById("logo-img");
 logo.src = siteContent.nav["img-src"];
