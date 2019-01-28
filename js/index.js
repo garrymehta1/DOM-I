@@ -56,6 +56,15 @@ document.querySelectorAll("nav a")[4].textContent =
 document.querySelectorAll("nav a")[5].textContent =
 	siteContent.nav["nav-item-6"];
 
+let navItem1 = document.createElement("a");
+navItem1.textContent = "Blog";
+document.querySelector("nav").appendChild(navItem1);
+
+let navItem2 = document.createElement("a");
+navItem2.textContent = "Vlogs";
+navItem2.style.marginRight = "20%";
+document.querySelectorAll("nav a")[0].prepend(navItem2);
+
 document.querySelectorAll("nav a").forEach(el => {
 	el.style.color = "green";
 });
