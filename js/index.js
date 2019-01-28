@@ -43,61 +43,65 @@ const siteContent = {
 };
 
 //HEADER - NAVBAR
-document.querySelectorAll("nav a")[0].textContent = "Services";
-document.querySelectorAll("nav a")[1].textContent = "Product";
-document.querySelectorAll("nav a")[2].textContent = "Vision";
-document.querySelectorAll("nav a")[3].textContent = "Features";
-document.querySelectorAll("nav a")[4].textContent = "About";
-document.querySelectorAll("nav a")[5].textContent = "Contact";
+document.querySelectorAll("nav a")[0].textContent =
+	siteContent.nav["nav-item-1"];
+document.querySelectorAll("nav a")[1].textContent =
+	siteContent.nav["nav-item-2"];
+document.querySelectorAll("nav a")[2].textContent =
+	siteContent.nav["nav-item-3"];
+document.querySelectorAll("nav a")[3].textContent =
+	siteContent.nav["nav-item-4"];
+document.querySelectorAll("nav a")[4].textContent =
+	siteContent.nav["nav-item-5"];
+document.querySelectorAll("nav a")[5].textContent =
+	siteContent.nav["nav-item-6"];
 
 //HEADER - IMG
 let logo = document.getElementById("logo-img");
-logo.src = "/img/logo.png";
+logo.src = siteContent.nav["img-src"];
 
 //SECTION CTA
-document.querySelector(".cta-text h1").textContent = "DOM is Awesome";
-document.getElementById("cta-img").src = "/img/header-img.png";
-document.getElementsByTagName("button")[0].textContent = "Get Started";
+document.querySelector(".cta-text h1").textContent = siteContent.cta.h1;
+document.getElementById("cta-img").src = siteContent.cta["img-src"];
+document.getElementsByTagName("button")[0].textContent = siteContent.cta.button;
 
 //SECTION MAIN-CONTENT
 document.querySelectorAll(".main-content .text-content h4")[0].textContent =
-	"Features";
+	siteContent["main-content"]["features-h4"];
 document.querySelectorAll(".main-content .text-content p")[0].textContent =
-	"Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-
-document.querySelectorAll(".text-content h4")[1].textContent = "About";
+	siteContent["main-content"]["features-content"];
+document.querySelectorAll(".text-content h4")[1].textContent =
+	siteContent["main-content"]["about-h4"];
 document.querySelectorAll(".text-content p")[1].textContent =
-	"About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-
+	siteContent["main-content"]["about-content"];
 //MIDDLE IMG
-document.getElementById("middle-img").src = "/img/mid-page-accent.jpg";
+document.getElementById("middle-img").src =
+	siteContent["main-content"]["middle-img-src"];
 
 //SECTION BOTTOM-CONTENT
 document.querySelectorAll(".bottom-content .text-content h4")[0].textContent =
-	"Services";
+	siteContent["main-content"]["services-h4"];
 document.querySelectorAll(".bottom-content .text-content p")[0].textContent =
-	"Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-
+	siteContent["main-content"]["services-content"];
 document.querySelectorAll(".bottom-content .text-content h4")[1].textContent =
-	"Product";
+	siteContent["main-content"]["product-h4"];
 document.querySelectorAll(".bottom-content .text-content p")[1].textContent =
-	"Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+	siteContent["main-content"]["product-content"];
 
 document.querySelectorAll(".bottom-content .text-content h4")[2].textContent =
-	"Vision";
+	siteContent["main-content"]["vision-h4"];
 document.querySelectorAll(".bottom-content .text-content p")[2].textContent =
-	"Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-
+	siteContent["main-content"]["vision-content"];
 //CONTACT
 
-document.querySelectorAll(".contact h4")[0].textContent = "Contact";
-let newline = "\r\n";
-document.querySelectorAll(".contact p")[0].style.whiteSpace = "pre";
+document.querySelectorAll(".contact h4")[0].textContent =
+	siteContent["contact"]["contact-h4"];
 document.querySelectorAll(".contact p")[0].textContent =
-	"123 Way 456 Street" + newline + "Somewhere, USA";
-
-document.querySelectorAll(".contact p")[1].textContent = "1 (888) 888-8888";
-document.querySelectorAll(".contact p")[2].textContent = "sales@greatidea.io";
+	siteContent["contact"].address;
+document.querySelectorAll(".contact p")[1].textContent =
+	siteContent["contact"].phone;
+document.querySelectorAll(".contact p")[2].textContent =
+	siteContent["contact"].email;
 
 document.querySelectorAll("footer p")[0].textContent =
-	"Copyright Great Idea! 2018";
+	siteContent["footer"].copyright;
